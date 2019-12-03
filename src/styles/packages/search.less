@@ -1,0 +1,87 @@
+@import '../common/var';
+
+.tz__search{
+  display: flex;
+  padding: 20px 32px;
+  align-items: center;
+  box-sizing: border-box;
+
+  &-content {
+    display: flex;
+    flex: 1;
+    background-color: @search-background-color;
+    border-radius: 4px;
+    padding-left: 20px;
+
+    &--round {
+      border-radius: 34px;
+    }
+  }
+
+  &-label {
+    padding: 0 5px;
+    font-size: 28px;
+    line-height: 80px;
+    color: @text-color;
+    height: 80px;
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #969799;
+    text-align: right;
+    vertical-align: middle;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 10px;
+  }
+
+  &-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+    line-height: 80px;
+    color: @text-color;
+    outline: none;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  &-input-disabled {
+    color: @gray-dark;
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  &-left-icon {
+    margin-right: 5px;
+  }
+
+  &-action {
+    padding: 0 20px;
+    color: @text-color;
+    font-size: 28px;
+    height: 80px;
+    line-height: 80px;
+    // &:active {
+    //   background-color: @active-color;
+    // }
+  }
+}
+.tz__search-show-action{
+  padding-right: 0;
+}

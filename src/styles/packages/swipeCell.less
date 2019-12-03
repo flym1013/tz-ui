@@ -1,0 +1,21 @@
+@import '../common/var';
+.tz__swipecell {
+  position: relative;
+  overflow: hidden;
+
+  &-left, &-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  &-left {
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  &-right {
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}

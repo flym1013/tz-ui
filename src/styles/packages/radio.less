@@ -1,0 +1,67 @@
+@import '../common/var';
+.tz__radio{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+
+  &-icon{
+    flex: none;
+    height: 2em;
+    width: 2em;
+    font-size: 20px;
+    line-height: 2em;
+    box-sizing: border-box;
+    .tz-icon {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      color: transparent;
+      font-size: 1.6em;
+      line-height: inherit;
+      text-align: center;
+      border: 2px solid @radio-border-color;
+      transition: @radio-transition-duration;
+    }
+
+    &-round{
+      .tz-icon{
+        border-radius: 100%;
+      }
+    }
+
+    &-checked {
+      .tz-icon{
+        color: @white;
+        background-color: @radio-checked-icon-color;
+        border-color: @radio-checked-icon-color;
+      }
+    }
+
+    &-disabled{
+      .tz-icon{
+        background-color: @radio-disabled-background-color;
+        border-color: @radio-disabled-icon-color;
+      }
+    }
+
+    &-disabled&-checked {
+      .tz-icon {
+        color: @radio-disabled-icon-color;
+      }
+    }
+  }
+
+  &-label{
+    margin-left: 20px;
+    color: @radio-label-color;
+    height: 2em;
+    line-height: 2em;
+    font-size: 28px;
+
+    &-disabled {
+      color: @radio-disabled-label-color;
+    }
+  }
+}

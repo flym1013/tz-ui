@@ -1,0 +1,91 @@
+@import '../common/var';
+.tz__field{
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 30px;
+  overflow: hidden;
+  color: #323233;
+  font-size: 24px;
+  line-height: 48px;
+  background-color: #ffffff;
+
+  &-required{
+    overflow: visible;
+    &::before{
+      position: absolute;
+      left: 14px;
+      color: #f44;
+      font-size: 28px;
+      content: '*';
+    }
+  }
+
+  &-value{
+    position: relative;
+    overflow: hidden;
+    color: @gray-dark;
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  &-body{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    &--textarea{
+      min-height: 24px;
+    }
+  }
+  &-input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: @text-color;
+    font-size: 28px;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+  }
+  &-button{
+    padding-left: 10px;
+  }
+  &-input-disabled {
+    color: @gray-dark;
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  &-input-error {
+    color: @red;
+    &::placeholder {
+      color: @red;
+    }
+  }
+
+  &-error-message {
+    font-size: 24px;
+    color: @red;
+    text-align: left;
+  }
+
+  &-label{
+    width: 180px;
+    font-size: 28px;
+  }
+
+  &-left-icon{
+    margin-right: 10px;
+  }
+
+  &-right-icon{
+    margin-right: -20px;
+    padding: 0 20px;
+    line-height: inherit;
+  }
+}

@@ -1,0 +1,85 @@
+@import "../animation/index";
+@import '../common/var';
+
+
+.tz__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: @dialog-width;
+  overflow: hidden;
+  font-size: @dialog-font-size;
+  background-color: @dialog-background-color;
+  border-radius: @dialog-border-radius;
+  transform: translate3d(-50%, -50%, 0);
+  backface-visibility: hidden; // avoid blurry text after scale animation
+  transition: @dialog-transition;
+  
+  &-header {
+    padding-top: @dialog-header-padding-top;
+    font-weight: @dialog-header-font-weight;
+    text-align: center;
+  }
+
+  &-isolated{
+    padding: @dialog-header-isolated-padding;
+  }
+
+  &-content {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-message {
+    max-height: @dialog-message-max-height;
+    padding: @dialog-message-padding;
+    overflow-y: auto;
+    font-size: @dialog-message-font-size;
+    line-height: @dialog-message-line-height;
+
+    // allow newline charactor
+    white-space: pre-wrap;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+
+    &--has-title {
+      padding-top: @dialog-has-title-message-padding-top;
+      color: @dialog-has-title-message-text-color;
+    }
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+
+  &-footer{
+    overflow: hidden;
+    user-select: none;
+    &-button {
+      display: flex;
+      .tz__button{
+        flex: 1;
+      }
+    }
+  }
+
+  .tz__button{
+    border: 0;
+  }
+
+  &-bounce-enter {
+    transform: translate3d(-50%, -50%, 0) scale(0.7);
+    opacity: 0;
+  }
+
+  &-bounce-leave-active {
+    transform: translate3d(-50%, -50%, 0) scale(0.9);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,81 @@
+@import '../common/var';
+
+.tz__stepper {
+  font-size: 0;
+
+  &-minus, &-plus {
+    position: relative;
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    margin: 2px;
+    padding: 10px;
+    vertical-align: middle;
+    background-color: #f2f3f5;
+    border: 0;
+  
+    &::before {
+      width: 9px;
+      height: 1px;
+    }
+
+    &::after {
+      width: 1px;
+      height: 9px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background-color: @text-color;
+      content: '';
+    }
+
+    &:active {
+      background-color: @stepper-active-color;
+    }
+  }
+
+  &-minus {
+    border-radius: 8px 0 0 8px;
+    &::after {
+      display: none;
+    }
+  }
+
+  &-plus {
+    border-radius: 0 8px 8px 0;
+  }
+  &-disabled {
+    background-color: @stepper-button-disabled-color;
+
+    &::before,
+    &::after {
+      background-color: @gray;
+    }
+  }
+  &-disabled&:hover {
+    background-color: @stepper-button-disabled-color;
+  }
+  &-input{
+    display: inline-block;
+    width: 60px;
+    height: 56px;
+    padding: 2px;
+    margin: 2px;
+    font-size: 28px;
+    color: @text-color;
+    text-align: center;
+    vertical-align: middle;
+    background-color: @stepper-background-color;
+    border: 0;
+    border-width: 2px 0;
+    border-radius: 0;
+    box-sizing: content-box;
+  }
+}
